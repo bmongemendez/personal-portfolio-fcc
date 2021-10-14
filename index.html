@@ -4,13 +4,22 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- FONTS -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&display=swap"
+			rel="stylesheet"
+		/>
 		<!-- STYLES -->
 		<link rel="stylesheet" href="./styles.css" />
 		<title>Brayan Monge - Software Developer</title>
 	</head>
 	<body>
 		<nav class="nav">
+			<div class="nav__background"></div>
 			<button class="nav__button">
+				<div class="nav__button-background"></div>
 				<span class="nav__button-lines-container">
 					<span class="nav__button-lines"></span>
 					<span class="nav__button-lines"></span>
@@ -18,14 +27,66 @@
 				</span>
 				menu
 			</button>
-			<ul class="nav__list">
-				<li class="nav__item"><a href="#home" class="nav__link">home</a></li>
-				<li class="nav__item"><a href="#projects" class="nav__link">projects</a></li>
-				<li class="nav__item"><a href="#contact" class="nav__link">contact</a></li>
+			<ul class="nav__list nav__list--text">
+				<li class="nav__item nav__item--text">
+					<a href="#home" class="nav__link nav__link--text">home</a>
+				</li>
+				<li class="nav__item nav__item--text">
+					<a href="#projects" class="nav__link nav__link--text">projects</a>
+				</li>
+				<li class="nav__item nav__item--text">
+					<a href="#contact" class="nav__link nav__link--text">contact</a>
+				</li>
+			</ul>
+			<ul class="nav__list nav__list--icons">
+				<li class="nav__item nav__item--icon">
+					<a href="#" class="nav__link nav__link--icon"
+						><img src="./img/icons/github.svg" alt="" class="nav__icon"
+					/></a>
+				</li>
+				<li class="nav__item nav__item--icon">
+					<a href="#" class="nav__link nav__link--icon"
+						><img src="./img/icons/linkedin.svg" alt="" class="nav__icon"
+					/></a>
+				</li>
+				<li class="nav__item nav__item--icon">
+					<a href="#" class="nav__link nav__link--icon"
+						><img src="./img/icons/codepen.svg" alt="" class="nav__icon"
+					/></a>
+				</li>
+				<li class="nav__item nav__item--icon">
+					<a href="#" class="nav__link nav__link--icon"
+						><img src="./img/icons/email.svg" alt="" class="nav__icon"
+					/></a>
+				</li>
 			</ul>
 		</nav>
-		<section class="section-home">
-			<header class="header">
+		<nav class="sidebar">
+			<ul class="sidebar__list">
+				<li class="sidebar__item">
+					<a href="" class="sidebar__item"
+						><img src="./img/icons/github.svg" alt="" class="sidebar__icon"
+					/></a>
+				</li>
+				<li class="sidebar__item">
+					<a href="" class="sidebar__item"
+						><img src="./img/icons/linkedin.svg" alt="" class="sidebar__icon"
+					/></a>
+				</li>
+				<li class="sidebar__item">
+					<a href="" class="sidebar__item"
+						><img src="./img/icons/codepen.svg" alt="" class="sidebar__icon"
+					/></a>
+				</li>
+				<li class="sidebar__item">
+					<a href="" class="sidebar__item"
+						><img src="./img/icons/email.svg" alt="" class="sidebar__icon"
+					/></a>
+				</li>
+			</ul>
+		</nav>
+		<section class="section section--home">
+			<header class="section__header section__header--home">
 				<h1 class="header__title">
 					Hello.<br />
 					I am Brayan,<br />
@@ -36,96 +97,116 @@
 				</h1>
 			</header>
 			<div class="home__image-container">
-				<img src="" alt="" class="home__image" />
+				<img src="./img/Tech World.gif" alt="" class="home__image" />
 				<div class="home__image-circule-background"></div>
 			</div>
 			<div class="home__down-arrow-container">
-				<img src="" alt="" class="home__down-arrow" />
+				<img src="./img/icons/down-arrow.svg" alt="" class="home__down-arrow" />
 			</div>
 		</section>
-		<section class="section__projects">
+		<section class="section section--projects">
 			<header class="section__header section__header--projects">
-				<h2 class="section__heading section__heading--projects">Projects</h2>
+				<div class="section__heading-container">
+					<h2 class="section__heading section__heading--projects">Projects</h2>
+					<div class="section__heading-line"></div>
+				</div>
 				<div class="section__heading-background section__heading-background--projects">
 					Projects
 				</div>
 			</header>
 			<div class="projects__container">
 				<div class="projects__banner"></div>
-				<div class="projects__project">
-					<h3 class="project__heading">
-						JMéndez Constructora<br />
-						Website
-					</h3>
-					<p class="project__info">
-						Creation of the<br />
-						website of the company
-					</p>
-					<div class="project__logos-container">
-						<img src="" alt="" class="project__logo" />
-						<img src="" alt="" class="project__logo" />
-						<img src="" alt="" class="project__logo" />
+				<div class="projects__project-card">
+					<div class="project-card__header">
+						<h3 class="project-card__heading">
+							JMéndez Constructora<br />
+							Website
+						</h3>
 					</div>
-					<div class="projects__links-container">
-						<a href="" class="projects__link">
-							View on github
-							<img src="" alt="" class="projects__link-logo" />
-						</a>
-						<a href="" class="projects__link">
-							Visit website
-							<img src="" alt="" class="projects__link-logo" />
-						</a>
+					<div class="project__card-body">
+						<p class="project-card__text">
+							Creation of the<br />
+							website of the company
+						</p>
 					</div>
-				</div>
-				<div class="projects__project">
-					<h3 class="project__heading">Personal Website</h3>
-					<p class="project__info">
-						Creation of another previous<br />
-						version of my porfolio
-					</p>
-					<div class="project__logos-container">
-						<img src="" alt="" class="project__logo" />
-						<img src="" alt="" class="project__logo" />
-						<img src="" alt="" class="project__logo" />
-					</div>
-					<div class="projects__links-container">
-						<a href="" class="projects__link">
-							View on github
-							<img src="" alt="" class="projects__link-logo" />
-						</a>
-						<a href="" class="projects__link">
-							Visit website
-							<img src="" alt="" class="projects__link-logo" />
-						</a>
+					<div class="project-card__footer">
+						<div class="project__logos-container">
+							<img src="./img/icons/react.svg" alt="" class="project__logo" />
+							<img src="./img/icons/nodejs.svg" alt="" class="project__logo" />
+							<img src="./img/icons/sass.svg" alt="" class="project__logo" />
+						</div>
+						<div class="projects__links-container">
+							<a href="" class="projects__link">
+								View on GitHub
+								<img src="./img/icons/link.svg" alt="" class="projects__link-logo" />
+							</a>
+							<a href="" class="projects__link">
+								Visit website
+								<img src="./img/icons/link.svg" alt="" class="projects__link-logo" />
+							</a>
+						</div>
 					</div>
 				</div>
-				<div class="projects__project">
-					<h3 class="project__heading">Codepen Projects</h3>
-					<p class="project__info">
-						Working projects<br />
-						about web development
-					</p>
-					<div class="project__logos-container">
-						<img src="" alt="" class="project__logo" />
-						<img src="" alt="" class="project__logo" />
-						<img src="" alt="" class="project__logo" />
+				<div class="projects__project-card">
+					<div class="project-card__header">
+						<h3 class="project-card__heading">Personal Website</h3>
 					</div>
-					<div class="projects__links-container">
-						<a href="" class="projects__link">
-							View on github
-							<img src="" alt="" class="projects__link-logo" />
-						</a>
-						<a href="" class="projects__link">
-							Visit website
-							<img src="" alt="" class="projects__link-logo" />
-						</a>
+					<div class="project__card-body">
+						<p class="project-card__text">
+							Creation of another previous<br />
+							version of my porfolio
+						</p>
+					</div>
+					<div class="project-card__footer">
+						<div class="project__logos-container">
+							<img src="./img/icons/react.svg" alt="" class="project__logo" />
+							<img src="./img/icons/nodejs.svg" alt="" class="project__logo" />
+							<img src="./img/icons/sass.svg" alt="" class="project__logo" />
+						</div>
+						<div class="projects__links-container">
+							<a href="" class="projects__link">
+								View on GitHub
+								<img src="./img/icons/link.svg" alt="" class="projects__link-logo" />
+							</a>
+							<a href="" class="projects__link">
+								Visit website
+								<img src="./img/icons/link.svg" alt="" class="projects__link-logo" />
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="projects__project-card">
+					<div class="project-card__header">
+						<h3 class="project-card__heading">Codepen Projects</h3>
+					</div>
+					<div class="project__card-body">
+						<p class="project-card__text">
+							Working projects<br />
+							about web development
+						</p>
+					</div>
+					<div class="project-card__footer">
+						<div class="project__logos-container">
+							<img src="./img/icons/html.svg" alt="" class="project__logo" />
+							<img src="./img/icons/css.svg" alt="" class="project__logo" />
+							<img src="./img/icons/javascript.svg" alt="" class="project__logo" />
+						</div>
+						<div class="projects__links-container">
+							<a href="" class="projects__link">
+								Visit CodePen
+								<img src="./img/icons/link.svg" alt="" class="projects__link-logo" />
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section class="section__contact">
+		<section class="section section--contact">
 			<header class="section__header section__header--contact">
-				<h2 class="section__heading section__heading--contact">Contact</h2>
+				<div class="section__heading-container section__heading-container--contact">
+					<h2 class="section__heading section__heading--contact">Contact</h2>
+					<div class="section__heading-line"></div>
+				</div>
 				<div class="section__heading-background section__heading-background--contact">
 					Let’s Talk
 				</div>
@@ -141,14 +222,14 @@
 					id="contact-message"
 					cols="30"
 					rows="10"
-					class="contact__message"
+					class="contact__form-input contact__form-input--message"
 				></textarea>
-				<button type="submit" class="contact__form-button contact__form-button--send">Sendt</button>
+				<button type="submit" class="contact__form-button contact__form-button--send">Send</button>
 			</form>
 		</section>
 		<footer class="footer">
 			<p class="footer__text">Made with <span class="footer__text-hearth-icon"></span> by Brayan</p>
-			<p class="footer__go-up-text">Go Up <span class="go-up__icon"></span></p>
+			<p class="footer__go-up-text">Go Up <span class="footer__go-up-icon"></span></p>
 		</footer>
 		<!-- SCRIPTS -->
 		<script src="./main.js"></script>
