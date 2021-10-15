@@ -25,6 +25,7 @@ body * {
 	--color-light: #fafafa;
 	--color-dark: #4a4a4a;
 	--sidebar-width: 3rem;
+	--section-padding: 3rem;
 }
 
 /* STYLES  */
@@ -197,6 +198,10 @@ body * {
 	transform: scale(1.1);
 }
 
+.sidebar {
+	display: none;
+}
+
 .section {
 	padding: 0 30px;
 }
@@ -223,11 +228,9 @@ body * {
 }
 
 .home__image-container {
-	position: absolute;
+	position: relative;
 	width: 250px;
-	height: 25;
 	margin-top: 100px;
-	transform: rotate(-90deg) translateY(-25%);
 }
 
 .home__image {
@@ -235,6 +238,7 @@ body * {
 	height: 100%;
 	object-fit: cover;
 	object-position: center;
+	transform: rotate(-90deg);
 }
 
 .home__image-circule-background {
@@ -260,6 +264,15 @@ body * {
 .home__down-arrow {
 	width: 100%;
 	height: 100%;
+}
+
+.section__wrapper {
+	position: relative;
+	width: 100%;
+}
+
+.section__wrapper--home {
+	height: 100vh;
 }
 
 .section__header {
@@ -383,7 +396,7 @@ body * {
 
 .projects__banner {
 	height: 200px;
-	width: calc(100% + 60px);
+	width: calc(100% + var(--section-padding) * 2);
 	position: absolute;
 	background-image: url(./img/Glitch\ Effect\ Background\ 3.jpg);
 	left: 50%;
@@ -408,7 +421,7 @@ body * {
 	font-size: 27px;
 }
 
-.contact__form-label:not(:first-child) {
+.contact__form-input-container:not(:first-child) {
 	margin-top: 1rem;
 }
 
@@ -418,6 +431,7 @@ body * {
 	border: 5px solid #000000;
 	height: 3rem;
 	padding: 1rem 1rem;
+	font-size: 18px;
 }
 
 .contact__form-input--message {
@@ -511,7 +525,7 @@ body * {
 
 /* MEDIA QUERIES */
 
-@media (min-width: 27rem) {
+@media (min-width: 32rem) {
 	.nav {
 		top: 0;
 		justify-content: flex-start;
@@ -580,7 +594,7 @@ body * {
 
 	.sidebar__list {
 		display: flex;
-		row-gap: 2rem;
+		row-gap: 4rem;
 		flex-direction: column;
 		list-style: none;
 	}
@@ -594,10 +608,164 @@ body * {
 		width: 32px;
 		filter: invert();
 	}
+	.section {
+		width: calc(100% - var(--sidebar-width));
+		margin-left: auto;
+		padding: 0 50px;
+		margin-bottom: 3rem;
+	}
+	.section__header--home {
+		padding-top: 5.5rem;
+	}
+	.home__image-container {
+		width: 300px;
+	}
+
+	.title__variant {
+		font-size: 54px;
+	}
+
+	.section__heading,
+	.header__title {
+		font-size: 72px;
+	}
+
+	.section__heading-background {
+		font-size: 108px;
+	}
+
+	.projects__project-card {
+		border: 8px solid #000000;
+		margin: 0;
+		max-width: 350px;
+	}
+
+	.projects__project-card:nth-child(2n + 1) {
+		margin-left: auto;
+	}
+
+	.project-card__heading {
+		font-size: 36px;
+	}
+
+	.contact__form-input-container {
+		display: flex;
+	}
+
+	.contact__form-label {
+		order: 2;
+		margin-left: 1rem;
+	}
+
+	.contact__form-input {
+		width: 60%;
+	}
+	.section__header {
+		margin-bottom: 2rem;
+	}
 }
 
 @media (min-width: 48rem) {
+	.section__wrapper {
+		max-width: 90rem;
+		height: 100%;
+		margin: 0 auto;
+	}
+	.home__image-container {
+		width: 400px;
+		margin-top: 125px;
+	}
 }
 
 @media (min-width: 65rem) {
+	:root {
+		--sidebar-width: 90px;
+	}
+	.section__wrapper--home {
+		display: flex;
+		align-items: center;
+	}
+	.section__header--home {
+		width: 50%;
+		margin-left: auto;
+		padding-top: 0;
+		padding-bottom: 5.5rem;
+		order: 2;
+		flex: 2 1 50%;
+	}
+	.home__image-container {
+		width: 80%;
+		margin: 0;
+		flex: 0 1 50%;
+		/* transform: rotate(0) translateY(-50%); */
+	}
+	.projects__container {
+		display: flex;
+		column-gap: 3rem;
+	}
+	.projects__project-card {
+		flex: 1 1 33%;
+	}
+	.projects__project-card:nth-child(2n + 1) {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.projects__project-card:nth-last-child(1) {
+		margin-left: auto;
+	}
+
+	.sidebar__icon {
+		width: 48px;
+		height: 48px;
+	}
+}
+
+@media (min-width: 90rem) {
+	.title__variant {
+		font-size: 72px;
+	}
+	.section__heading,
+	.header__title {
+		font-size: 126px;
+	}
+
+	.section__heading-background {
+		font-size: 198px;
+	}
+
+	.project-card__heading {
+		font-size: 36px;
+	}
+
+	.project-card__text {
+		font-size: 18px;
+	}
+	.nav__link--text {
+		font-size: 27px;
+	}
+}
+
+@media (min-width: 102rem) {
+	.title__variant {
+		font-size: 90px;
+	}
+	.section__heading,
+	.header__title {
+		font-size: 144px;
+	}
+
+	.section__heading-background {
+		font-size: 216px;
+	}
+
+	.project-card__heading {
+		font-size: 54px;
+	}
+
+	.project-card__text {
+		font-size: 36px;
+	}
+	.nav__link--text {
+		font-size: 36px;
+	}
 }
