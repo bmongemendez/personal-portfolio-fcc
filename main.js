@@ -51,3 +51,33 @@ contactForm.addEventListener('submit', (e) => {
 
 	e.target.reset();
 });
+
+const projectsBanner = document.querySelector('.projects__banner');
+
+// Make elements full width ignoring scrollbar because 100vw includes it
+const getFullWidth = (element) => {
+	const scrollBarWidth = window.innerWidth - document.body.clientWidth;
+	const fullWidth = window.innerWidth - scrollBarWidth;
+	return fullWidth;
+};
+
+function checksDeviceWidth(mediaQueryRule) {
+	if (mediaQueryRule.matches) {
+		const sidebarWidthVariable = getComputedStyle(document.body).getPropertyValue(
+			'--sidebar-width'
+		);
+		const sidebarWidthComputed = sidebarWidthVariable.replace(/[a-z]/gi, '') * 16;
+		// If media query matches
+		projectsBanner.style.width = `${getFullWidth() - sidebarWidthComputed}px`;
+	} else {
+		projectsBanner.style.width = `${getFullWidth()}px`;
+	}
+}
+
+const mediaQueryRule = window.matchMedia('(min-width: 33rem)');
+
+checksDeviceWidth(mediaQueryRule); // Call listener function at run time
+
+window.addEventListener('resize', () => {
+	checksDeviceWidth(mediaQueryRule);
+});
