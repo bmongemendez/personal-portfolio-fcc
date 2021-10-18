@@ -36,6 +36,14 @@ html {
 	scroll-behavior: smooth;
 }
 
+body.nav--active {
+	overflow-y: hidden;
+}
+
+.sweet-alert2-container {
+	z-index: 10000 !important;
+}
+
 .nav {
 	display: flex;
 	justify-content: center;
@@ -54,7 +62,7 @@ html {
 	top: 0;
 }
 
-.nav.nav--active .nav__background {
+.nav__background {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -66,7 +74,7 @@ html {
 	z-index: -1;
 }
 
-.nav.nav--active .nav__background::after {
+.nav__background::after {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -202,6 +210,17 @@ html {
 
 .nav__item {
 	transition: transform 0.1s ease-out;
+	transform-origin: right top;
+}
+
+.nav__item:nth-child(2) {
+	transition: transform 0.1s ease-out;
+	transform-origin: center top;
+}
+
+.nav__item:nth-child(3) {
+	transition: transform 0.1s ease-out;
+	transform-origin: left top;
 }
 
 .nav__item:hover {
@@ -607,10 +626,14 @@ html {
 		padding: 0.5rem 0.8rem;
 		margin: 0;
 		position: relative;
-		background-color: rgba(0, 0, 0, 0.8);
+		background-color: rgba(0, 0, 0, 1);
 	}
 
-	.nav__item:before {
+	.nav__item:hover:after {
+		content: unset;
+	}
+	/* 
+	.nav__item:after {
 		content: '';
 		position: absolute;
 		top: 0;
@@ -619,7 +642,7 @@ html {
 		width: 100%;
 		background-image: url(./img/Glitch\ Effect\ Background\ 4.jpg);
 		z-index: -1;
-	}
+	} */
 
 	.nav__link--text {
 		font-size: 18px;
