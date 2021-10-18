@@ -16,16 +16,12 @@
 			type="text/javascript"
 			src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
 		></script>
-		<script type="text/javascript">
-			(function () {
-				emailjs.init('user_87ayOZuaHkRIAmLxIJtsH');
-			})();
-		</script>
+		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	</head>
 	<body>
-		<nav class="nav">
+		<nav class="nav" id="navbar">
 			<div class="nav__background"></div>
 			<button class="nav__button">
 				<div class="nav__button-background"></div>
@@ -38,7 +34,7 @@
 			</button>
 			<ul class="nav__list nav__list--text">
 				<li class="nav__item nav__item--text">
-					<a href="#home" class="nav__link nav__link--text">home</a>
+					<a href="#welcome-section" class="nav__link nav__link--text">home</a>
 				</li>
 				<li class="nav__item nav__item--text">
 					<a href="#projects" class="nav__link nav__link--text">projects</a>
@@ -49,27 +45,33 @@
 			</ul>
 			<ul class="nav__list nav__list--icons">
 				<li class="nav__item nav__item--icon">
-					<a href="#" class="nav__link nav__link--icon"
-						><img loading="lazy" src="./img/icons/github.svg" alt="GitHub Logo" class="nav__icon"
+					<a
+						target="_blank"
+						href="https://github.com/bmongemendez/"
+						class="nav__link nav__link--icon"
+						id="profile-link"
+						><img src="./img/icons/github.svg" alt="GitHub Logo" class="nav__icon"
 					/></a>
 				</li>
 				<li class="nav__item nav__item--icon">
-					<a href="#" class="nav__link nav__link--icon"
-						><img
-							loading="lazy"
-							src="./img/icons/linkedin.svg"
-							alt="LinkedIn Logo"
-							class="nav__icon"
+					<a
+						target="_blank"
+						href="https://www.linkedin.com/in/bmongemendez/"
+						class="nav__link nav__link--icon"
+						><img src="./img/icons/linkedin.svg" alt="LinkedIn Logo" class="nav__icon"
 					/></a>
 				</li>
 				<li class="nav__item nav__item--icon">
-					<a href="#" class="nav__link nav__link--icon"
-						><img loading="lazy" src="./img/icons/codepen.svg" alt="CodePen Logo" class="nav__icon"
+					<a
+						target="_blank"
+						href="https://codepen.io/bmongemendez"
+						class="nav__link nav__link--icon"
+						><img src="./img/icons/codepen.svg" alt="CodePen Logo" class="nav__icon"
 					/></a>
 				</li>
 				<li class="nav__item nav__item--icon">
-					<a href="#" class="nav__link nav__link--icon"
-						><img loading="lazy" src="./img/icons/email.svg" alt="Email Logo" class="nav__icon"
+					<a target="_blank" href="mailto:bmongemendez@gmail.com" class="nav__link nav__link--icon"
+						><img src="./img/icons/email.svg" alt="Email Logo" class="nav__icon"
 					/></a>
 				</li>
 			</ul>
@@ -77,40 +79,28 @@
 		<nav class="sidebar">
 			<ul class="sidebar__list">
 				<li class="sidebar__item">
-					<a href="" class="sidebar__item"
-						><img
-							loading="lazy"
-							src="./img/icons/github.svg"
-							alt="GitHub Logo"
-							class="sidebar__icon"
+					<a target="_blank" href="https://github.com/bmongemendez/" class="sidebar__item"
+						><img src="./img/icons/github.svg" alt="GitHub Logo" class="sidebar__icon"
 					/></a>
 				</li>
 				<li class="sidebar__item">
-					<a href="" class="sidebar__item"
-						><img
-							loading="lazy"
-							src="./img/icons/linkedin.svg"
-							alt="LinkedIn Logo"
-							class="sidebar__icon"
+					<a target="_blank" href="https://www.linkedin.com/in/bmongemendez/" class="sidebar__item"
+						><img src="./img/icons/linkedin.svg" alt="LinkedIn Logo" class="sidebar__icon"
 					/></a>
 				</li>
 				<li class="sidebar__item">
-					<a href="" class="sidebar__item"
-						><img
-							loading="lazy"
-							src="./img/icons/codepen.svg"
-							alt="CodePen Logo"
-							class="sidebar__icon"
+					<a target="_blank" href="https://codepen.io/bmongemendez" class="sidebar__item"
+						><img src="./img/icons/codepen.svg" alt="CodePen Logo" class="sidebar__icon"
 					/></a>
 				</li>
 				<li class="sidebar__item">
-					<a href="" class="sidebar__item"
-						><img loading="lazy" src="./img/icons/email.svg" alt="Email Logo" class="sidebar__icon"
+					<a target="_blank" href="mailto:bmongemendez@gmail.com" class="sidebar__item"
+						><img src="./img/icons/email.svg" alt="Email Logo" class="sidebar__icon"
 					/></a>
 				</li>
 			</ul>
 		</nav>
-		<section class="section section--home">
+		<section class="section section--home" id="welcome-section">
 			<div class="section__wrapper section__wrapper--home">
 				<header class="section__header section__header--home">
 					<h1 class="header__title">
@@ -123,20 +113,15 @@
 					</h1>
 				</header>
 				<div class="home__image-container">
-					<img loading="lazy" src="./img/Tech World.gif" alt="" class="home__image" />
+					<img src="./img/Tech World.gif" alt="" class="home__image" />
 					<div class="home__image-circule-background"></div>
 				</div>
-				<a href="#section-projects" class="home__down-arrow-container">
-					<img
-						loading="lazy"
-						src="./img/icons/down-arrow.svg"
-						alt="Go Down Arrow"
-						class="home__down-arrow"
-					/>
+				<a href="#projects" class="home__down-arrow-container">
+					<img src="./img/icons/down-arrow.svg" alt="Go Down Arrow" class="home__down-arrow" />
 				</a>
 			</div>
 		</section>
-		<section id="section-projects" class="section section--projects">
+		<section id="projects" class="section section--projects">
 			<div class="section__wrapper">
 				<header class="section__header section__header--projects">
 					<div class="section__heading-container">
@@ -151,7 +136,7 @@
 					<div class="projects__project-card">
 						<div class="project__card-wrapper">
 							<div class="project-card__header">
-								<h3 class="project-card__heading">
+								<h3 class="project-card__heading project-tile">
 									JMéndez Constructora<br />
 									Website
 								</h3>
@@ -164,37 +149,30 @@
 							</div>
 							<div class="project-card__footer">
 								<div class="project__logos-container">
-									<img
-										loading="lazy"
-										src="./img/icons/react.svg"
-										alt="React JS"
-										class="project__logo"
-									/>
-									<img
-										loading="lazy"
-										src="./img/icons/nodejs.svg"
-										alt="Node JS"
-										class="project__logo"
-									/>
-									<img loading="lazy" src="./img/icons/sass.svg" alt="SAAS" class="project__logo" />
+									<img src="./img/icons/react.svg" alt="React JS" class="project__logo" />
+									<img src="./img/icons/nodejs.svg" alt="Node JS" class="project__logo" />
+									<img src="./img/icons/sass.svg" alt="SAAS" class="project__logo" />
 								</div>
 								<div class="projects__links-container">
-									<a href="" class="projects__link">
+									<a
+										target="_blank"
+										href="https://github.com/bmongemendez/JM-Constructora"
+										class="projects__link"
+									>
 										View on GitHub<sup
 											><img
-												loading="lazy"
 												src="./img/icons/link.svg"
 												alt="GitHub Logo"
 												class="projects__link-logo"
 										/></sup>
 									</a>
-									<a href="" class="projects__link">
+									<a
+										target="_blank"
+										href="https://jmendezconstructorasa.herokuapp.com/"
+										class="projects__link"
+									>
 										Visit website<sup
-											><img
-												loading="lazy"
-												src="./img/icons/link.svg"
-												alt="Link Logo"
-												class="projects__link-logo"
+											><img src="./img/icons/link.svg" alt="Link Logo" class="projects__link-logo"
 										/></sup>
 									</a>
 								</div>
@@ -204,7 +182,7 @@
 					<div class="projects__project-card">
 						<div class="project__card-wrapper">
 							<div class="project-card__header">
-								<h3 class="project-card__heading">Personal Website</h3>
+								<h3 class="project-card__heading project-tile">Personal Website</h3>
 							</div>
 							<div class="project__card-body">
 								<p class="project-card__text">
@@ -214,37 +192,30 @@
 							</div>
 							<div class="project-card__footer">
 								<div class="project__logos-container">
-									<img
-										loading="lazy"
-										src="./img/icons/react.svg"
-										alt="React JS"
-										class="project__logo"
-									/>
-									<img
-										loading="lazy"
-										src="./img/icons/nodejs.svg"
-										alt="Node JS"
-										class="project__logo"
-									/>
-									<img loading="lazy" src="./img/icons/sass.svg" alt="SAAS" class="project__logo" />
+									<img src="./img/icons/react.svg" alt="React JS" class="project__logo" />
+									<img src="./img/icons/nodejs.svg" alt="Node JS" class="project__logo" />
+									<img src="./img/icons/sass.svg" alt="SAAS" class="project__logo" />
 								</div>
 								<div class="projects__links-container">
-									<a href="" class="projects__link">
+									<a
+										target="_blank"
+										href="https://github.com/bmongemendez/brayan-monge-web-page"
+										class="projects__link"
+									>
 										View on GitHub<sup
 											><img
-												loading="lazy"
 												src="./img/icons/link.svg"
 												alt="GitHub Logo"
 												class="projects__link-logo"
 										/></sup>
 									</a>
-									<a href="" class="projects__link">
+									<a
+										target="_blank"
+										href="https://bmongemendez.herokuapp.com/"
+										class="projects__link"
+									>
 										Visit website<sup
-											><img
-												loading="lazy"
-												src="./img/icons/link.svg"
-												alt="Link Logo"
-												class="projects__link-logo"
+											><img src="./img/icons/link.svg" alt="Link Logo" class="projects__link-logo"
 										/></sup>
 									</a>
 								</div>
@@ -255,7 +226,7 @@
 					<div class="projects__project-card">
 						<div class="project__card-wrapper">
 							<div class="project-card__header">
-								<h3 class="project-card__heading">Codepen Projects</h3>
+								<h3 class="project-card__heading project-tile">Codepen Projects</h3>
 							</div>
 							<div class="project__card-body">
 								<p class="project-card__text">
@@ -265,33 +236,18 @@
 							</div>
 							<div class="project-card__footer">
 								<div class="project__logos-container">
+									<img src="./img/icons/html.svg" alt="HTML Logo" class="project__logo" />
+									<img src="./img/icons/css.svg" alt="CSS Logo" class="project__logo" />
 									<img
-										loading="lazy"
-										src="./img/icons/html.svg"
-										alt="HTML Logo"
-										class="project__logo"
-									/>
-									<img
-										loading="lazy"
-										src="./img/icons/css.svg"
-										alt="CSS Logo"
-										class="project__logo"
-									/>
-									<img
-										loading="lazy"
 										src="./img/icons/javascript.svg"
 										alt="JavaScript Logo"
 										class="project__logo"
 									/>
 								</div>
 								<div class="projects__links-container">
-									<a href="" class="projects__link">
+									<a target="_blank" href="https://codepen.io/bmongemendez" class="projects__link">
 										Visit CodePen<sup
-											><img
-												loading="lazy"
-												src="./img/icons/link.svg"
-												alt="Link Logo"
-												class="projects__link-logo"
+											><img src="./img/icons/link.svg" alt="Link Logo" class="projects__link-logo"
 										/></sup>
 									</a>
 								</div>
@@ -301,7 +257,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="section section--contact">
+		<section class="section section--contact" id="contact">
 			<div class="section__wrapper">
 				<header class="section__header section__header--contact">
 					<div class="section__heading-container section__heading-container--contact">
